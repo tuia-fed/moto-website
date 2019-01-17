@@ -1,0 +1,40 @@
+{
+"frames": {
+	"animal.1.png": {
+		"frame": {"x":114, "y":607, "w":114, "h":114},
+		"spriteSourceSize": {"x":0,"y":0,"w":114,"h":114},
+		"sourceSize": {"w":114,"h":114}
+	},
+	"animal.2.png": {
+		"frame": {"x":342, "y":607, "w":114, "h":114},
+		"spriteSourceSize": {"x":0,"y":0,"w":114,"h":114},
+		"sourceSize": {"w":114,"h":114}
+	},
+	"animal.3.png": {
+		"frame": {"x":228, "y":607, "w":114, "h":114},
+		"spriteSourceSize": {"x":0,"y":0,"w":114,"h":114},
+		"sourceSize": {"w":114,"h":114}
+	},
+	"animal.4.png": {
+		"frame": {"x":456, "y":607, "w":114, "h":114},
+		"spriteSourceSize": {"x":0,"y":0,"w":114,"h":114},
+		"sourceSize": {"w":114,"h":114}
+	},
+	"animal.5.png": {
+		"frame": {"x":0, "y":607, "w":114, "h":114},
+		"spriteSourceSize": {"x":0,"y":0,"w":114,"h":114},
+		"sourceSize": {"w":114,"h":114}
+	},
+	"grid.png": {
+		"frame": {"x":0, "y":0, "w":609, "h":607},
+		"spriteSourceSize": {"x":0,"y":0,"w":609,"h":607},
+		"sourceSize": {"w":609,"h":607}
+	}
+
+},
+"meta": {
+	"image": "misc.png",
+	"size": {"w": 609, "h": 721},
+	"scale": "1"
+}
+}
