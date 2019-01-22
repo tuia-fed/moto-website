@@ -46,7 +46,7 @@
       move(el) {
         tween({
           from: {x: 0, y: 0, width: 100, height: 100},
-          to: {x: -200, y: 0, width: 60, height: 70},
+          to: {x: -280, y: 0, width: 60, height: 70},
           duration: 1.5
         }).start(v => {
           el.style.width = `${v.width}%`;
@@ -151,6 +151,12 @@
     }
     .img-bottom {
       position: absolute;
+      height: 100%;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
   .fade-enter-active, .fade-leave-active {
