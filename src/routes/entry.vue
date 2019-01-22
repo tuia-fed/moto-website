@@ -148,6 +148,7 @@
       position: absolute;
       top: 50%;
       left: 15%;
+      z-index: 2;
     }
     .img-bottom {
       position: absolute;
