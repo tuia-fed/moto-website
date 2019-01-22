@@ -3,6 +3,7 @@ const
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   webpack = require('webpack'),
   HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin'),
+  CopyWebpackPlugin = require('copy-webpack-plugin'),
   {VueLoaderPlugin} = require('vue-loader'),
   isProd = process.env.NODE_ENV === 'production'
 
@@ -70,6 +71,9 @@ const config = {
       Vue: ['vue/dist/vue.esm.js', 'default'],
       Router: ['vue-router', 'default'],
       PIXI: 'pixi.js'
+    }),
+    new webpack.DefinePlugin({
+      PREFIX: JSON.stringify(isProd ? '/moto-website' : '')
     })
   ],
 
@@ -77,9 +81,12 @@ const config = {
 }
 if (isProd) {
   config.plugins.push(
+    new CopyWebpackPlugin([
+      {from: 'static', to: 'static'}
+    ]),
     new HtmlWebpackPlugin({
       template: './src/template.html',
-      filename: 'app.html',
+      filename: 'index.html',
       inlineSource: '.(js|css)$',
       minify: {
         collapseWhitespace: true

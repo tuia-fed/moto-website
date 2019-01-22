@@ -2,7 +2,7 @@
   <div id="lottie">
     <div class="logo-content" v-show="logoShow">
       <div class="logo">
-        <img src="../static/logo.png" alt="">
+        <img :src="`${prefix}/static/textures/logo.png`" alt="">
       </div>
       <div class="buttons">
         <a href="">实例</a>
@@ -15,7 +15,7 @@
         Moto.js是一款开源的动画库，助力开发者快速实现各种动画效果而无需了解背后的复杂运算。javaScript核心运算库可以与各种场景无缝结合。同时，专为web开发者准备了基于Less的常用动画合集。一进引入，轻松开发。
       </div>
     </transition>
-    
+
     <transition name="fade">
       <div class="content" v-show="contentShow">
         <a href="">Download</a>
@@ -25,7 +25,7 @@
 
     <transition name="fade">
       <div class='img-bottom'>
-        <img src="../static/fluid.png" alt="">
+        <img :src="`${prefix}/static/textures/fluid.png`" alt="">
       </div>
     </transition>
   </div>
@@ -39,7 +39,8 @@
       return {
         logoShow: false,
         contentShow: false,
-        describe: false
+        describe: false,
+        prefix: PREFIX
       }
     },
     methods: {
@@ -68,7 +69,7 @@
         renderer: 'svg',
         loop: false,
         autoplay: true,
-        path: '/src/static/moto.json' // the path to the animation json
+        path: `${this.prefix}/static/animes/moto.json` // the path to the animation json
       }).addEventListener('complete', v => {
         this.logoShow = true;
         let svg = document.querySelector('#lottie svg');

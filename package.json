@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -fr dist & cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "JetLu",
@@ -25,6 +25,7 @@
     "@tuia/moto.js": "^1.0.0-beta.6",
     "babel-loader": "^8.0.5",
     "bootstrap": "^4.2.1",
+    "copy-webpack-plugin": "^4.6.0",
     "core-js": "^2.6.2",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
