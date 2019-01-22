@@ -75,7 +75,6 @@ const config = {
 
   mode: isProd ? 'production' : 'development'
 }
-console.log(isProd, "_______");
 if (isProd) {
   config.plugins.push(
     new HtmlWebpackPlugin({

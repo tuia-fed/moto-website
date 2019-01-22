@@ -36,10 +36,9 @@
         loop: false,
         autoplay: true,
         path: '/src/static/moto.json' // the path to the animation json
-      });
-      setTimeout(()=>{
+      }).addEventListener('complete', v => {
         this.contentShow = true;
-      }, 1500)
+      })
     }
   }
 </script>
