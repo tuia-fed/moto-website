@@ -18,5 +18,9 @@
     margin: 0;
     padding: 0;
   }
+
+  i {
+    font-style: normal;
+  }
 </style>
 

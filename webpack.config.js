@@ -72,7 +72,7 @@ const config = {
       PIXI: 'pixi.js'
     }),
     new webpack.DefinePlugin({
-      PREFIX: JSON.stringify(isProd ? '/moto-website' : '')
+      PREFIX: ''
     })
   ],
 

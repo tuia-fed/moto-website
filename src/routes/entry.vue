@@ -13,8 +13,9 @@
       <section class="anime" ref="anime"></section>
       <transition name="slide"><div class="btn-group" v-show="completed">
         <button class="btn"><a href="https://tuia-fed.github.io/moto-website/docs/" target="_blank">Documents</a></router-link></button>
-        <button class="btn"><a href="https://github.com/tuia-fed/moto.js">Github</a></button>
-        <button class="btn"><a href="https://unpkg.com/@tuia/moto.js/">Download</a></button>
+        <button class="btn"><a href="https://github.com/tuia-fed/moto.js" target="_blank">Github</a></button>
+        <button class="btn"><a href="https://unpkg.com/@tuia/moto.js/" target="_blank">Download</a></button>
+        <button class="btn"><a href="#/showcase">Showcase</a></button>
       </div></transition>
     </section>
   </section>
