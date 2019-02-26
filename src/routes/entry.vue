@@ -12,7 +12,7 @@
     <section class="container d-flex align-items-center flex-column">
       <section class="anime" ref="anime"></section>
       <transition name="slide"><div class="btn-group" v-show="completed">
-        <button class="btn"><a href="https://tuia-fed.github.io/moto-website/docs/" target="_blank">Documents</router-link></button>
+        <button class="btn"><a href="https://tuia-fed.github.io/moto-website/docs/" target="_blank">Documents</a></router-link></button>
         <button class="btn"><a href="https://github.com/tuia-fed/moto.js">Github</a></button>
         <button class="btn"><a href="https://unpkg.com/@tuia/moto.js/">Download</a></button>
       </div></transition>
@@ -112,7 +112,7 @@
         renderer: 'svg',
         loop: false,
         autoplay: true,
-        path: process.env.NODE_ENV === 'production' ? '/moto-website/static/animes/moto.json' : '/static/animes/moto.json'
+        path: '/static/animes/moto.json'
       }).addEventListener('complete', ev => {
         this.completed = true
       })
@@ -151,7 +151,7 @@
     .btn-group {
       .btn {
         color: #fff;
-        background-color: var(--blue);
+        background-color: #00bcd4;
 
         a {
           color: #fff;

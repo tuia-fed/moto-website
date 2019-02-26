@@ -1,7 +1,6 @@
 module.exports = {
   title: 'moto.js',
   description: 'A light motion library with curvilinear support.',
-  base: process.env.NODE_ENV === 'production' ? '/moto-website/docs/' : '/',
   themeConfig: {
     sidebar: [
       ['/getting-started', 'Getting Started'],
