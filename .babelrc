@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["@babel/env", {"useBuiltIns": "usage"}]
+    ["@babel/env", {"useBuiltIns": "usage", "corejs": 2}]
   ],
   "plugins": [
     "@babel/syntax-dynamic-import",
@@ -9,8 +9,8 @@
     "@babel/proposal-optional-chaining",
     "@babel/proposal-export-default-from",
     "@babel/proposal-export-namespace-from",
-    ["@babel/plugin-transform-runtime", {
-      "corejs": false,
+    ["@babel/transform-runtime", {
+      "corejs": 2,
       "helpers": false,
       "regenerator": true,
       "useESModules": true

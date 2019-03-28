@@ -12,10 +12,10 @@
     <section class="container d-flex align-items-center flex-column">
       <section class="anime" ref="anime"></section>
       <transition name="slide"><div class="btn-group" v-show="completed">
-        <button class="btn"><a href="https://tuia-fed.github.io/moto-website/docs/" target="_blank">Documents</a></router-link></button>
+        <button class="btn"><a href="https://tuia-fed.github.io/moto-website/docs/" target="_blank">文档</a></router-link></button>
         <button class="btn"><a href="https://github.com/tuia-fed/moto.js" target="_blank">Github</a></button>
-        <button class="btn"><a href="https://unpkg.com/@tuia/moto.js/" target="_blank">Download</a></button>
-        <button class="btn"><a href="#/showcase">Showcase</a></button>
+        <button class="btn"><a href="https://unpkg.com/@tuia/moto.js/" target="_blank">下载</a></button>
+        <button class="btn"><a href="#/showcase">示例</a></button>
       </div></transition>
     </section>
   </section>

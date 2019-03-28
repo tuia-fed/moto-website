@@ -72,7 +72,7 @@ const config = {
       PIXI: 'pixi.js'
     }),
     new webpack.DefinePlugin({
-      PREFIX: ''
+      PREFIX: JSON.stringify('')
     })
   ],
 

@@ -1,10 +1,10 @@
 <template>
   <section class="h-100">
-    <iframe :src="`${PREFIX}/index.html#/games/xxl`" frameborder="0"
-      :style="{width: `${ratio * 784}px`, height: `${ratio * 1596}px`}"
-      v-if="showed"
-      ref="iframe"
-    ></iframe>
+    <section class="shadow" v-show="showed" @click="showed = false">
+      <iframe frameborder="0" ref="iframe"
+        :style="{width: `${ratio * 784}px`, height: `${ratio * 1596}px`}"
+      ></iframe>
+    </section>
     <ul>
       <li v-for="(item, i) in list" @click="handle('item:click', i)">
         <i class="thumbnail" :style="{backgroundImage: `url(${item.thumbnail})`}"></i>
@@ -18,10 +18,10 @@
   export default {
     data() {
       return {
-        PREFIX: '',
         showed: false,
         list: [
-          {name: '消消乐', thumbnail: '/static/images/xxl.jpg', url: ''}
+          {name: '消消乐', thumbnail: '/static/images/xxl.jpg', url: '/index.html#/games/xxl'},
+          {name: '弹珠机', thumbnail: '/static/images/dzj.jpg', url: 'https://activity.tuia.cn/activity/index?id=9360&login=preview&appKey=jlg88lyxz7siqtmr'}
         ]
       }
     },
@@ -38,8 +38,8 @@
         switch (args[0]) {
           case 'item:click': {
             this.showed = true
-            // console.log(this.$refs.iframe)
-            // this.$refs.iframe.src = this.list[args[1]]
+            console.log(this.$refs.iframe)
+            this.$refs.iframe.src = this.list[args[1]].url
             break
           }
         }
@@ -56,6 +56,8 @@
 <style lang="less" scoped>
   section {
     background-color: #3c3c3c;
+    position: relative;
+    overflow: auto;
 
     ul {
       list-style: none;
@@ -64,8 +66,9 @@
       list-style-position: inside;
       text-align: center;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, 16rem);
+      grid-gap: 2rem;
+      justify-content: center;
 
       li {
         cursor: pointer;
@@ -91,6 +94,16 @@
       }
     }
   }
+
+  .shadow {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.555);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   iframe {
     position: absolute;
     width: 784 / 2.5px;
@@ -100,7 +113,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: transparent;
   }
 </style>
 
